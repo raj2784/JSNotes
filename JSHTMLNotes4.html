@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS HTML Notes 4</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLang("C#");
+    addLang("Java");
+    addLang("Ruby");
+
+    // optimise approach
+    function addOptimiseLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptimiseLang("NodeJS");
+    addOptimiseLang("ReactJS");
+
+    //edit element with innerHTML
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.innerHTML = "GoLang";
+    const addNewli = document.createElement("li");
+    addNewli.textContent = "Angular";
+    secondLang.replaceWith(addNewli);
+
+    //edit element with outerHTML
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>VueJS</li>";
+
+    //remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>

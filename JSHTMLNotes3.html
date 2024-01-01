@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulateion 3</title>
+  </head>
+  <body style="background-color: black; color: aliceblue"></body>
+  <script>
+    const createDiv = document.createElement("div");
+    console.log(createDiv);
+    createDiv.className = "main";
+    createDiv.id = Math.random() * 10 + 1;
+    createDiv.setAttribute("title", "generated title");
+    createDiv.style.backgroundColor = "orange";
+    createDiv.style.padding = "15px";
+    //createDiv.innerText = "JSNotes 3";
+    const addText = document.createTextNode("JSNotes");
+    createDiv.appendChild(addText);
+    document.body.appendChild(createDiv);
+  </script>
+</html>
