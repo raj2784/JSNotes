@@ -1,3 +1,332 @@
+"use strict";
+
+//alert("Hello"); we are using nodeJS not browser
+
+//Data Types
+
+console.log(3 + 7);
+
+//Stack , Heap
+
+//All primitive type (Stak), Heap (Non-Premitive)
+
+let myYoutubeName = "raj2784";
+
+let anotherName = myYoutubeName;
+
+anotherName = "goat3186";
+
+console.log(anotherName);
+console.log(myYoutubeName);
+
+let userOne = {
+  email: "user@google.com",
+  upi: "user@ybl",
+};
+
+let userTow = userOne;
+
+userTow.email = "user2@yahoo.com";
+
+console.log(userOne.email);
+console.log(userTow.email);
+
+// Premitive data types
+// call bay value
+
+String;
+Number;
+const score = 100;
+const scoreValue = 100.3;
+Boolean;
+const isLoggin = false;
+null;
+undefined;
+let useremail;
+Symbol;
+const id = Symbol("123");
+const anotherid = Symbol("123");
+console.log(id === anotherid);
+BigInt;
+const acard = 1231654489464684746545n;
+console.log(typeof acard);
+
+// Non premitive data types
+
+Array;
+
+const color = ["toyota", "nissan", "maruti"];
+
+console.log(typeof color);
+
+Object;
+
+const employee = {
+  name: "raj",
+  age: 22,
+};
+
+console.log(typeof employee);
+
+Function;
+
+const myfunction = function () {
+  console.log("hello world");
+};
+
+console.log(typeof myfunction);
+
+//string methods
+
+let cityName = "Bangluru";
+
+console.log(cityName.charAt(4));
+console.log(cityName.substring(1, 5));
+console.log(cityName.slice(1, 5));
+console.log(cityName.toUpperCase());
+console.log(cityName.toLowerCase());
+console.log(cityName.search("g"));
+console.log(cityName.indexOf("g"));
+console.log(cityName.split("-"));
+
+//number and maths
+
+const rollnum = 101;
+
+const newrollnum = new Number(100);
+
+console.log(newrollnum.toFixed(5));
+
+const price = 124.4545;
+
+console.log(price.toPrecision(3));
+
+const oneMil = 1000000;
+
+console.log(oneMil.toLocaleString("en-IN"));
+
+const minval = Number.MAX_VALUE;
+
+console.log(minval);
+
+console.log(Math.abs(-5));
+
+console.log(Math.min(3, 2, 4, 64, 1));
+console.log(Math.max(3, 2, 4, 64, 1));
+
+console.log(Math.random());
+console.log(Math.random() * 10 + 1);
+console.log(Math.floor(Math.random() * 10 + 1));
+
+const min = 50;
+const max = 60;
+//mininmum in between min and max
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+
+//Data type Date and time
+
+let myDate = new Date();
+console.log(myDate.toString());
+console.log(myDate.toISOString());
+console.log(myDate.toJSON());
+console.log(myDate.toLocaleDateString());
+console.log(myDate.toLocaleTimeString());
+console.log(myDate.toLocaleString());
+console.log(myDate.toTimeString());
+console.log(myDate.toUTCString());
+console.log(myDate.toDateString());
+
+console.log(
+  myDate.toLocaleDateString("default", {
+    weekday: "long",
+  })
+);
+
+//month and Day start with 0 in JS
+
+console.log(myDate.getMonth() + 1);
+console.log(myDate.getDay() + 1);
+console.log(myDate.getDate());
+
+//Arrays in JavaScript
+
+const myArray = [0, 1, 2, 3, 1, 45, 6, 4, 5, 47];
+
+console.log("Orignal myArray", myArray);
+
+myArray.push(51);
+
+console.log("myArray push new element at the end of the Array", myArray);
+
+myArray.pop();
+
+console.log("myArray POP removing last element of the array", myArray);
+
+myArray.unshift(27071984);
+
+console.log("myArray unshift adding new element at 0 index", myArray);
+
+myArray.shift();
+
+console.log("myArray shift removing element at 0 index", myArray);
+
+const myArrayJoin = myArray.join("-");
+
+console.log("myArray Join convert data type to string", myArrayJoin);
+
+const myArraySlice = myArray.slice(1, 3);
+
+console.log("Orignal myArray after slice", myArray);
+console.log(
+  "myArray slice start from 1 and add till 3 but not included last paramter (1,3,) and not chnage orignal array",
+  myArraySlice
+);
+
+const myArraySplice = myArray.splice(1, 3);
+
+console.log("Orignal myArray after splice", myArray);
+console.log(
+  "myArray splice start from 1 and add till 3 but Included last parameter and change the orignal array",
+  myArraySplice
+);
+
+const syndey = ["HarrisPark", "Clyde", "Blacktown"];
+
+const adeliade = ["Prospect", "ClovellyPark", "Marion"];
+
+// adeliade.push(syndey);
+
+// console.log("after push with sydney overrite the existing array", adeliade);
+
+// console.log(adeliade[3][0]);
+
+const sydadl = syndey.concat(adeliade);
+
+console.log(
+  "after concat with adeliade return new array nad have to hold in new variable",
+  sydadl
+);
+
+const allcities = [...syndey, ...adeliade];
+
+console.log("after using spread operator (...)", allcities);
+
+const queue = [10, 19, 15, 17, [12, 11, [13, 18, 16]]];
+
+console.log("orignal queue with nesting Array", queue);
+
+//const newqueue = queue.flat(Infinity);
+
+//console.log("after using flat method on queue", newqueue);
+
+console.log(Array.isArray("Rajan"));
+
+console.log(Array.from("Rajan"));
+
+console.log(Array.from({ student: "Rajan" })); //can't convert from object to array
+
+let std1 = "james";
+let std2 = "sam";
+let std3 = "ronika";
+
+console.log(Array.of(std1, std2, std3));
+
+//objects 2 types
+
+//1 singleton object type
+//Object.create
+
+//2 literals object type
+
+const mySym = Symbol("Key1");
+
+const jsUser = {
+  name: "Rajan",
+  "Full Name": "Rajan Bhatia",
+  age: 20,
+  [mySym]: "myKey1",
+  location: "adeliade",
+  email: "rajan@gmail.com",
+  isLoggin: false,
+  lastLoginDate: ["Monday", "Thursday"],
+};
+
+//2 ways to access objects .notetion and other is [] with string
+
+console.log(jsUser);
+console.log(jsUser.age);
+console.log(jsUser["age"]);
+console.log(jsUser["Full Name"]);
+// Symbol access within object
+console.log(typeof jsUser[mySym]);
+
+jsUser.email = "rajan@yahoo.com";
+
+//to loack the object freeze method use
+//Object.freeze(jsUser);
+jsUser.email = "rajan@hotmail.com";
+
+console.log(jsUser);
+
+jsUser.greeting = function () {
+  console.log(`welcome ${this.name}`);
+};
+
+console.log(jsUser.greeting());
+
+//Object singleton
+
+const tinderUser = new Object();
+
+tinderUser.id = "65465464";
+tinderUser.name = "Jenny";
+tinderUser.isLoggedn = false;
+
+console.log("tinder data", tinderUser);
+
+const obj1 = { 1: "a", 2: "b", 3: "c", 4: "d" };
+
+const obj2 = { 5: "y", 6: "x", 7: "t", 8: "r" };
+
+// const obj3 = { obj1, obj2 };
+// console.log(obj3);
+
+const obj4 = Object.assign({}, obj1, obj2);
+
+console.log("using object assign merging the object in to one", obj4);
+
+const obj5 = { ...obj1, ...obj2 };
+
+console.log("using spread operator merging the object in to one", obj5);
+
+//when there multiple object in one array of the object
+const college = [
+  { id: 125, email: "g@gmail.com" },
+  { id: 253, email: "s@gmail.com" },
+];
+
+console.log(college[1].id);
+
+const objKeys = Object.keys(jsUser);
+
+console.log(objKeys);
+
+const objVlaues = Object.values(jsUser);
+
+console.log(objVlaues);
+
+const objEntires = Object.entries(jsUser);
+
+console.log(objEntires);
+
+const objcheck = jsUser.hasOwnProperty("email");
+
+console.log(objcheck);
+
+
+
+
+
 //Object Destructuring
 
 const course = {
