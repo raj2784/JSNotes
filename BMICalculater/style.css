@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  text-align: center;
+  margin-top: 100px;
+  color: white;
+}
+
+#height {
+  margin-bottom: 20px;
+}
+
+#weight {
+  margin-bottom: 20px;
+}
+
+#result {
+  color: red;
+  margin-bottom: 20px;
+}
+#button {
+  background-color: rgb(24, 114, 2);
+  color: white;
+  font-size: 15px;
+  margin-left: 8px;
+}

@@ -36,7 +36,7 @@ console.log(userTow.email);
 
 String;
 Number;
-const score = 100;
+let scored = 100;
 const scoreValue = 100.3;
 Boolean;
 const isLoggin = false;
@@ -322,10 +322,6 @@ console.log(objEntires);
 const objcheck = jsUser.hasOwnProperty("email");
 
 console.log(objcheck);
-
-
-
-
 
 //Object Destructuring
 
