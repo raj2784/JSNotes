@@ -1,0 +1,57 @@
+body {
+  background-color: black;
+  color: antiquewhite;
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+}
+#title {
+  font-size: 75;
+}
+
+#guessField {
+  text-align: center;
+  font-size: 25px;
+  color: red;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+#button {
+  background-color: black;
+  color: white;
+  font-size: 21px;
+  padding: 7px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#instruction {
+  background-color: grey;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
+.guesses {
+  margin-bottom: 20px;
+}
+
+.remaining {
+  margin-bottom: 20px;
+}
+
+.lowOrHight {
+  margin-bottom: 20px;
+}
+
+#newGame {
+  background-color: green;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
