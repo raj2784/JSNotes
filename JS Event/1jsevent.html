@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: aqua">
+    <ul id="images">
+      <li>
+        <img
+          width="200"
+          src="https://loremflickr.com/cache/resized/5800_31456463045_5a0af4ddc8_320_240_nofilter.jpg"
+          id="cat"
+          alt=""
+          style="cursor: pointer"
+        />
+      </li>
+      <li>
+        <img
+          width="200"
+          src="https://loremflickr.com/cache/resized/65535_52645317903_20aaa3621d_320_240_nofilter.jpg"
+          id="dog"
+          alt=""
+          style="cursor: pointer"
+        />
+      </li>
+      <li>
+        <img
+          width="200"
+          src="https://loremflickr.com/cache/resized/65535_52026764450_ac35310e27_n_320_240_nofilter.jpg"
+          id="natali"
+          alt=""
+          style="cursor: pointer"
+        />
+      </li>
+      <li>
+        <img
+          width="200"
+          src="https://loremflickr.com/cache/resized/65535_49259264763_b1270ae7b5_320_240_g.jpg"
+          id="bride"
+          alt=""
+          style="cursor: pointer"
+        />
+      </li>
+      <li>
+        <a src="" id="google" href="https://google.com" style="color: white"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    // document.getElementById("dog").onclick = function () {
+    //   alert("dog clicked");
+    // };
+    // document.getElementById("dog").addEventListener("click", function () {
+    //   alert("dog clicked again");
+    // });
+    //atachEvent()
+    //jQeuery - on
+    //type,timeStamp,preventDefault
+    //target,toElement,srcElement,currentTarget
+    //clientX,cleintY,screenX,screenY
+    //altKey,ctrlKey,shiftKey,keyCode
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   false
+    // );
+
+    //add addEventListener have 3 parameters, third is boolean false or true ,
+    //default is false : event capture from inside to out side element : (bubbling event)
+    //if we make it true : than it will outside to insise element
+
+    // document.getElementById("dog").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.stopPropagation(); // stopping event to go bubbling
+    //     console.log("clicked on dog");
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google").addEventListener("click", function (e) {
+    //   e.preventDefault();
+    //   e.stopPropagation(); //stopping event to go bubbling (parent element event stopping)
+    //   console.log("google click");
+    // });
+
+    // document.querySelector("#images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log(e.target.parentNode);
+    //     let imgTag = e.target.parentNode;
+    //     imgTag.remove();
+    //   },
+    //   false
+    // );
+    document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        //when wanted to remove only particular Tag with condition
+        console.log(e.target.tagName);
+        let imgTag = e.target.tagName;
+        if (imgTag === "IMG") {
+          imgTag.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>

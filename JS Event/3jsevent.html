@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1>JS setInternval and clearInterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDateandName = () => {
+      console.log("Rajan", Date.now());
+    };
+    //setInterval(sayDateandName, 3000);
+
+    // setInternval with third parameter
+    const sayDateandNameandGreet = function (str) {
+      console.log(str, "Rajan", Date.now());
+    };
+    var ss = null;
+    //     var interval = null;
+
+    // function startStuff(func, time) {
+    //     interval = setInterval(func, time);
+    // }
+
+    // function stopStuff() {
+    //     clearInterval(interval);
+    // }
+
+    // for controlled set interval need to hold it up in global variable than use same vailable name into setInterval and use same name to clearInterval
+    document.querySelector("#start").addEventListener("click", function () {
+      console.log("start");
+      ss = setInterval(sayDateandNameandGreet, 3000, "Hello");
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("stop");
+      clearInterval(ss);
+    });
+  </script>
+</html>
