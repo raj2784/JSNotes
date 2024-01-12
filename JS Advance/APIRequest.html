@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Request</title>
+  </head>
+  <body style="background-color: black; color: wheat">
+    <h1 id="git" style="background-color: black; color: wheat">
+      Git Hub followers :
+    </h1>
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/raj2784";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        console.log(this.responseText);
+        //data type always getting from API is string format
+        //below line is converting string to JSON
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        console.log(data.followers);
+        const gitfollower = data.followers;
+        document.querySelector(
+          "#git"
+        ).innerHTML = `Git Hub followers : ${gitfollower}`;
+      }
+    };
+
+    xhr.send();
+  </script>
+</html>
