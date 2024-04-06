@@ -93,3 +93,11 @@ function outer() {
 }
 
 outer();
+
+// Flattened Array
+
+const numArray = [1, 2, 3, [5, 4, 9], [12, 14, 58, 69, 71]];
+
+const flatArray1 = numArray.flat();
+
+console.log(flatArray1);
